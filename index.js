@@ -36,7 +36,6 @@ class AutoAutonomo {
         this.cajaCambios = 0;
         this.numeroParadas = 0;
         this.acomuladorParadas = 0;
-        this.curva = 0;
         this.paradas = [];
     }
 

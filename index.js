@@ -223,7 +223,7 @@ class AutoAutonomo {
                 clearInterval(timeAccumulator);
             }
         }
-        let timeAccumulator = setInterval(tiempo, 1000);
+        let timeAccumulator = setInterval(tiempo, 90);
 
     }
 
@@ -248,7 +248,7 @@ class AutoAutonomo {
                 klm.textContent = klmCurrent + 1;
             }    
         }
-        let klms = setInterval(kilometros, 50000, this.paradas);
+        let klms = setInterval(kilometros, 7000, this.paradas);
     }
 
     tiempoCurva() {

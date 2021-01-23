@@ -11,6 +11,7 @@ const buttonStationary = document.querySelector('.stationary');
 const buttonIz = document.querySelector('.iz');
 const buttonDr = document.querySelector('.dr');
 // seleccionar elementos HTML
+const h1Instrucciones = document.querySelector('.instrucciones')
 const h2El = document.querySelector('h2');
 const h3Uno = document.querySelector('.h3Uno');
 const h3Dos = document.querySelector('.h3Dos');
@@ -93,8 +94,8 @@ class AutoAutonomo {
     // prender y apagar estacionarias
     botonStacionarias() {
         if (this.estacionarias === false){
-            imgIz.setAttribute('src', 'imagenes/flecha-iz.jpg');
-            imgDr.setAttribute('src', 'imagenes/flecha-dr.jpg');
+            imgIz.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500077/19653931-flecha-amarilla-que-mira-a-la-izquierda-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
+            imgDr.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500078/19653912-flecha-amarilla-mirando-a-la-derecha-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
             this.estacionarias = true;
         } else {
             imgIz.setAttribute('src', '');
@@ -106,7 +107,7 @@ class AutoAutonomo {
     // Direccional izquierda
     botonDirIz() {
         if (this.dirIz === false) {
-            imgIz.setAttribute('src', 'imagenes/flecha-iz.jpg');
+            imgIz.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500077/19653931-flecha-amarilla-que-mira-a-la-izquierda-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
             this.dirIz = true;
             newAuto.eventosTeclado();
         } else {
@@ -119,7 +120,7 @@ class AutoAutonomo {
     // Direccional derecha
     botonDirDr() {
         if (this.dirDr === false) {
-            imgDr.setAttribute('src', 'imagenes/flecha-dr.jpg');
+            imgDr.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500078/19653912-flecha-amarilla-mirando-a-la-derecha-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
             this.dirDr = true;
             newAuto.eventosTeclado();
         } else {
@@ -166,14 +167,15 @@ class AutoAutonomo {
         console.log(this.paradas);
 
         h3Dos.innerHTML = "DESTINO:<br> Aeropuerto internacional Jose Maria Cordoba de rionegro 15 klm";
-        h1Time.innerHTML = `<span id="time">0</span> segundos`;
-        h1Klm.innerHTML = `<span id="klm">0</span> klm`;
+        h1Time.innerHTML = `Tiempo <span id="time">0</span> segundos`;
+        h1Klm.innerHTML = `<span id="klm">0</span> klm recorridos`;
     }
 
     arrancar() {
         // comprobar si el auto esta encendito el destino escogido la caja de cambios en modo avanzar
         if (this.encendido === true && this.destinoElegido === true && this.cajaCambios === 3) {
             newAuto.eventosTeclado();
+            h1Instrucciones.innerHTML = "";
             
             // iniciar tiempo
             if (this.iniciarTiempo === false) {
@@ -272,10 +274,10 @@ class AutoAutonomo {
         const time = Math.floor(Math.random() * (6 - 1)) + 1;
         this.acomuladorParadas += time;
 
-        imgIz.setAttribute('src', 'imagenes/flecha-iz.jpg');
-        imgDr.setAttribute('src', 'imagenes/flecha-dr.jpg');
+        imgIz.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500077/19653931-flecha-amarilla-que-mira-a-la-izquierda-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
+        imgDr.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500078/19653912-flecha-amarilla-mirando-a-la-derecha-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
         h1Stop.innerHTML = `<span id="stop-seconds">${time}</span> segundos`;
-        imgStop.setAttribute('src', 'imagenes/stop.jpg');
+        imgStop.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6X7ZPhFXXfKuwNLSJN0PAFOLa4umu78Z7uw&usqp=CAU');
         this.estacionarias = true;
 
         const stop = document.getElementById('stop-seconds');
@@ -299,9 +301,9 @@ class AutoAutonomo {
         const tiempoHoras = (tiempoSegundos / 60) / 60;
         const klm = 5 / tiempoHoras;
         h1Klm.innerHTML = `velocidad: ${parseInt(klm)} klm/h`;
-        imgStop.setAttribute('src', 'imagenes/stop.jpg');
-        imgIz.setAttribute('src', 'imagenes/flecha-iz.jpg');
-        imgDr.setAttribute('src', 'imagenes/flecha-dr.jpg');
+        imgStop.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6X7ZPhFXXfKuwNLSJN0PAFOLa4umu78Z7uw&usqp=CAU');
+        imgIz.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500077/19653931-flecha-amarilla-que-mira-a-la-izquierda-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
+        imgDr.setAttribute('src', 'https://previews.123rf.com/images/darakchi/darakchi1305/darakchi130500078/19653912-flecha-amarilla-mirando-a-la-derecha-en-el-bot%C3%B3n-verde-cristalino-aislado-en-fondo-blanco.jpg');
         h1Stop.innerHTML = "Has llegado a tu destino";
         this.estacionarias = true;
     }

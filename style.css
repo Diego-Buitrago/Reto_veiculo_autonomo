@@ -8,7 +8,7 @@ h1 {
 }
 
 .tablero img {
-    height: 900px;
+    width: 1095px;
     position: absolute;
 
 }
@@ -16,11 +16,11 @@ h1 {
 .output {
     text-align: center;
     color: aliceblue;
-    width: 379px;
-    height: 550px;
-    margin-top: 300px;
+    width: 450px;
+    height: 600px;
+    margin-top: 100px;
     background-color: #3fabb9;
-    margin-left: 1024px;
+    margin-left: 1095px;
     padding: 3px 10px;
     border: #0d110f 4px solid;
     border-radius: 20px;
@@ -42,13 +42,13 @@ button:hover {
 }
 
 .on {
-    margin-top: 465px;
-    margin-left: 730px;
+    margin-top: 300px;
+    margin-left: 609px;
 }
 
 .destination {
-    margin-top: 300px;
-    margin-left: 870px;
+    margin-top: 250px;
+    margin-left: 820px;
 }
 
 .hand_brake {
@@ -57,43 +57,43 @@ button:hover {
 }
 
 .D {
-    margin-top: 770px;
-    margin-left: 854px;
+    margin-top: 640px;
+    margin-left: 920px;
 }
 
 .P {
-    margin-top: 750px;
-    margin-left: 848px;
+    margin-top: 580px;
+    margin-left: 905px;
 }
 
 .N {
-    margin-top: 730px;
-    margin-left: 840px;
+    margin-top: 620px;
+    margin-left: 915px;
 }
 
 .R {
-    margin-top: 710px;
-    margin-left: 830px;
+    margin-top: 600px;
+    margin-left: 910px;
 }
 
 .starts {
-    margin-top: 420px;
-    margin-left: 490px;
+    margin-top: 302px;
+    margin-left: 334px;
 }
 
 .stationary {
-    margin-top: 465px;
-    margin-left: 860px;
+    margin-top: 240px;
+    margin-left: 950px;
 }
 
 .iz {
-    margin-top: 435px;
-    margin-left: 277px;
+    margin-top: 400px;
+    margin-left: 330px;
 }
 
 .dr {
-    margin-top: 460px;
-    margin-left: 275px;
+    margin-top: 350px;
+    margin-left: 320px;
 }
 
 .alert {
@@ -106,14 +106,14 @@ button:hover {
 
 .izquierda {
     position: absolute;
-    margin-top: 430px;
-    margin-left: 370px;
+    margin-top: 180px;
+    margin-left: 360px;
     width: 50px;
 }
 
 .derecha {
     position: absolute;
-    margin-top: 430px;
-    margin-left: 602px;
+    margin-top: 180px;
+    margin-left: 560px;
     width: 50px;
 }

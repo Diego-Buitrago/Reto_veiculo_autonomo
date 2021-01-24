@@ -85,7 +85,7 @@ class AutoAutonomo {
                 h1Uno.innerHTML = "";
                 h1Dos.innerHTML = "";
             } else if (this.cajaCambios !== 0 || this.cajaCambios !== 1 && this.encendido !== false ) {
-                h3UnoclassList.add('alert');
+                h3Uno.classList.add('alert');
                 h3Uno.innerHTML = "Porfavor coloque la caja de cambios en parqueo o neutro";
             }
         } 
